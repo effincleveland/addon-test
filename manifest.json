@@ -1,0 +1,45 @@
+{
+
+	"manifest_version": 2,
+
+	"name": "cool addon",
+
+	"description": "why so evil?",
+	
+	"version": "1.0",
+
+	"icons": {
+		"48": "icons/icon.png"
+	},
+
+	"applications": {
+
+		"gecko": {
+			"id": "email@mozilla.org",
+			"strict_min_version": "45.0"
+		}
+	},
+
+	"content_scripts": [
+	{
+		"matches": ["*://*.google.com/*"],
+		"js": ["dontbeevil.js"]
+		}
+	],
+
+	"permissions": [
+	"activeTab"
+	],
+
+	"browser_action": {
+		"default_icon": "icons/icon.png",
+		"default_title": "upit",
+		"default_popup": "upit.html"
+	},
+
+	"web_accessible_resources": [
+	"beasts/frog.jpg",
+	"beasts/turtle.jpg",
+	"beasts/snake.jpg"
+	]
+}
